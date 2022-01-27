@@ -1,0 +1,528 @@
+[
+    {
+        "id": "427001477aadb4c4",
+        "type": "tab",
+        "label": "Work Conditions Monitoring Device",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0f625fc1d187d1e6",
+        "type": "inject",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "883575d26f07ef7f"
+            ]
+        ]
+    },
+    {
+        "id": "fe4015c59a24a459",
+        "type": "inject",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 160,
+        "wires": [
+            [
+                "ac61c6d7237dd6a0"
+            ]
+        ]
+    },
+    {
+        "id": "e5137556c6b0c061",
+        "type": "inject",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "52f18829155b543f"
+            ]
+        ]
+    },
+    {
+        "id": "e53891973b385c22",
+        "type": "inject",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "78910528fc187c95"
+            ]
+        ]
+    },
+    {
+        "id": "61aafc15fa75e188",
+        "type": "inject",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "9ba1aed29c573c72"
+            ]
+        ]
+    },
+    {
+        "id": "883575d26f07ef7f",
+        "type": "file in",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "filename": "temperature.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 360,
+        "y": 100,
+        "wires": [
+            [
+                "c500ca8e2866bd44"
+            ]
+        ]
+    },
+    {
+        "id": "c500ca8e2866bd44",
+        "type": "ui_chart",
+        "z": "427001477aadb4c4",
+        "name": "Temperature",
+        "group": "c045ed46f848b5dd",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac61c6d7237dd6a0",
+        "type": "file in",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "filename": "humidity.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "09be3d0ef238d619"
+            ]
+        ]
+    },
+    {
+        "id": "52f18829155b543f",
+        "type": "file in",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "filename": "light.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 340,
+        "y": 220,
+        "wires": [
+            [
+                "44400a60f46882fb"
+            ]
+        ]
+    },
+    {
+        "id": "78910528fc187c95",
+        "type": "file in",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "filename": "co2.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 330,
+        "y": 280,
+        "wires": [
+            [
+                "f0dbd29612d5576a"
+            ]
+        ]
+    },
+    {
+        "id": "9ba1aed29c573c72",
+        "type": "file in",
+        "z": "427001477aadb4c4",
+        "name": "",
+        "filename": "tvoc.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "5e6672cb167478a6"
+            ]
+        ]
+    },
+    {
+        "id": "09be3d0ef238d619",
+        "type": "ui_chart",
+        "z": "427001477aadb4c4",
+        "name": "Humidity",
+        "group": "686bce571177aa45",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 560,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "44400a60f46882fb",
+        "type": "ui_chart",
+        "z": "427001477aadb4c4",
+        "name": "Light",
+        "group": "0444ce732d35ee35",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Light",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0dbd29612d5576a",
+        "type": "ui_chart",
+        "z": "427001477aadb4c4",
+        "name": "CO2",
+        "group": "02093907fdf35991",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "CO2",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5e6672cb167478a6",
+        "type": "ui_chart",
+        "z": "427001477aadb4c4",
+        "name": "TVOC",
+        "group": "2acbad66a1a7f22d",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "TVOC",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c045ed46f848b5dd",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "9df404bf72a53f4c",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "686bce571177aa45",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "9df404bf72a53f4c",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0444ce732d35ee35",
+        "type": "ui_group",
+        "name": "Group 3",
+        "tab": "9df404bf72a53f4c",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "02093907fdf35991",
+        "type": "ui_group",
+        "name": "Group 4",
+        "tab": "9df404bf72a53f4c",
+        "order": 4,
+        "disp": false,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2acbad66a1a7f22d",
+        "type": "ui_group",
+        "name": "Group 5",
+        "tab": "9df404bf72a53f4c",
+        "order": 5,
+        "disp": false,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9df404bf72a53f4c",
+        "type": "ui_tab",
+        "name": "User Interface of Work Conditions Monitoring Device",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
