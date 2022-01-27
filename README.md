@@ -5,11 +5,11 @@ To use project you need to:
 1. Upload "arduino_WorkConditionsMonitoringDevice.ino" to your Arduino Nano microcontroller.
 
 2. On Raspberry Pi 0:
-   1. Turn on I2C communication
+   1. Change Raspberry Pi configuration:
     `$ sudo raspi-config`
-    `3. Interface Options -> P5 I2C -> <YES>`
-    `3. Interface Options -> P6 Serial Port -> <YES>`
-    `3. Interface Options -> P8 Remote GPIO -> <YES>`
+    Select `3 Interface Options` -> `P5 I2C` -> `<YES>`
+    Select `3 Interface Options` -> `P6 Serial Port` -> `<YES>`
+    Select `3 Interface Options` -> `P8 Remote GPIO` -> `<YES>`
    2. Run python script "python_WorkConditionsMonitoringDevice.py"
     `$ python3 python_WorkConditionsMonitoringDevice.py`
 
